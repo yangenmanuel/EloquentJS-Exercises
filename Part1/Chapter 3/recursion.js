@@ -24,4 +24,4 @@ function isEven (num) {
 
 }
 
-console.log(isEven(-1))
+module.exports = isEven

@@ -8,4 +8,4 @@ function getMin (a, b) {
   return Math.min(a, b)
 }
 
-console.log(getMin(1,2))
+module.exports = getMin

@@ -21,7 +21,6 @@ function isEven (num) {
   else if (num === 1) return false
 
   else return isEven(num - 2)
-
 }
 
 module.exports = isEven

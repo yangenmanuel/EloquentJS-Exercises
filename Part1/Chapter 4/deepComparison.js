@@ -11,22 +11,22 @@ function deepEqual (val1, val2) {
   if (val1 === val2) return true
   if ((typeof val1 !== 'object' && val1 === null) && (typeof val2 !== 'object' && val2 == null)) return false
 
-  let keysA = Object.keys(val1)
-  let keysB = Object.keys(val2)
+  const keysA = Object.keys(val1)
+  const keysB = Object.keys(val2)
 
   if (keysA.length != keysB.length) return false
 
-  for (let key of keysA) {
+  for (const key of keysA) {
     if (keysB.includes(key) || !deepEqual(val1[key], val2[key])) return false
   }
 
   return true
 }
 
-let obj = {here: {is: "an"}, object: 2};
-console.log(deepEqual(obj, obj));
+const obj = { here: { is: 'an' }, object: 2 }
+console.log(deepEqual(obj, obj))
 // → true
-console.log(deepEqual(obj, {here: 1, object: 2}));
+console.log(deepEqual(obj, { here: 1, object: 2 }))
 // → false
-console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+console.log(deepEqual(obj, { here: { is: 'an' }, object: 2 }))
 // → true

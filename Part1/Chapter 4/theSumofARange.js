@@ -11,35 +11,32 @@ As a bonus assignment, modify your range function to take an optional third argu
 */
 
 const range = (first, last, step) => {
-  let arr = []
-  
-  if(step && step < 0){
+  const arr = []
+
+  if (step && step < 0) {
     for (let i = first; i >= last; i += step) {
       arr.push(i)
     }
-  }
-  
-  else {
-    for(let i = first; i <= last; step ? i += step : i++){
+  } else {
+    for (let i = first; i <= last; step ? i += step : i++) {
       arr.push(i)
-    }    
+    }
   }
-  
+
   return arr
 }
 
 const sum = (nums) => {
   let result = 0
-  for(let num of nums) {      
-      result += num
+  for (const num of nums) {
+    result += num
   }
   return result
 }
 
-
-console.log(range(1, 10));
+console.log(range(1, 10))
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-console.log(range(5, 2, -1));
+console.log(range(5, 2, -1))
 // → [5, 4, 3, 2]
-console.log(sum(range(1, 10)));
+console.log(sum(range(1, 10)))
 // → 55

@@ -4,29 +4,28 @@
 Thinking back to the notes about side effects and pure functions in the previous chapter, which variant do you expect to be useful in more situations? Which one runs faster?
  */
 
-let arr1 = [1,2,3]
+const arr1 = [1, 2, 3]
 function reverseArray (arr) {
-  let reversed = []
-  
-  for(let i = arr.length - 1; i >= 0; i--){
+  const reversed = []
+
+  for (let i = arr.length - 1; i >= 0; i--) {
     reversed.push(arr[i])
   }
   return reversed
 }
- 
+
 console.log(reverseArray(arr1)) // [3, 2, 1]
 console.log(arr1) // [1, 2, 3] El array original no fue modificado
 
-let arr2 = [1,2,3]
-function reverseArrayInPlace(arr2) {
-	for (var i = 0; i < Math.floor(arr2.length / 2); i++) {
-		  var old = arr2[i];
-    	arr2[i] = arr2[arr2.length - 1 - i];
-    	arr2[arr2.length - 1 - i] = old;
-	}
-	return arr2;
+const arr2 = [1, 2, 3]
+function reverseArrayInPlace (arr2) {
+  for (let i = 0; i < Math.floor(arr2.length / 2); i++) {
+		  const old = arr2[i]
+    	arr2[i] = arr2[arr2.length - 1 - i]
+    	arr2[arr2.length - 1 - i] = old
+  }
+  return arr2
 }
 
 console.log(reverseArrayInPlace(arr2))
 console.log(arr2)
-

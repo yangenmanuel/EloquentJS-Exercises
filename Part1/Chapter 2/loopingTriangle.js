@@ -15,7 +15,7 @@ It may be useful to know that you can find the length of a string by writing .le
 
 let char = '#'
 
-while(char.length <= 7){
+while (char.length <= 7) {
   console.log(char)
   char += '#'
 }

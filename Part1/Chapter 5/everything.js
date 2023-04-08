@@ -6,7 +6,7 @@ Implement every as a function that takes an array and a predicate function as pa
 */
 
 function everyWithLoop (arr, test) {
-  for (let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     if (!test(arr[i])) return false
   }
   return true
@@ -16,10 +16,9 @@ function everyWithSome (arr, test) {
   return !arr.some(el => !test(el))
 }
 
-console.log(everyWithSome([1, 3, 5], n => n < 10));
+console.log(everyWithSome([1, 3, 5], n => n < 10))
 // → true
-console.log(everyWithSome([2, 4, 16], n => n < 10));
+console.log(everyWithSome([2, 4, 16], n => n < 10))
 // → false
-console.log(everyWithSome([], n => n < 10));
+console.log(everyWithSome([], n => n < 10))
 // → true
-

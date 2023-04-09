@@ -9,8 +9,12 @@ script associated with them. The characterScript and countBy functions defined e
 in the chapter are probably useful here.
 */
 
-import { readFileSync } from 'fs'
-const SCRIPTS = JSON.parse(readFileSync('./scripts.json'))
+import { readFile } from 'fs/promises'
+const SCRIPTS = JSON.parse(
+  await readFile(
+    new URL('./scripts.json', import.meta.url)
+  )
+)
 
 function characterScript (code) {
   for (const script of SCRIPTS) {

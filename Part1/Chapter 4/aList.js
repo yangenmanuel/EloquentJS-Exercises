@@ -22,7 +22,7 @@ Write a function arrayToList that builds up a list structure like the one shown 
 If you haven’t already, also write a recursive version of nth.
 */
 
-function arrayToList (arr) {
+function arrayToList(arr) {
   let list = null
   for (let i = arr.length - 1; i >= 0; i--) {
     list = { value: arr[i], rest: list }
@@ -30,7 +30,7 @@ function arrayToList (arr) {
   return list
 }
 
-function listToArray (list) {
+function listToArray(list) {
   const result = []
   if (
     typeof list === 'undefined' ||
@@ -50,18 +50,18 @@ function listToArray (list) {
   return result
 }
 
-function prepend (element, list) {
+function prepend(element, list) {
   return {
     value: element,
     rest: list
   }
 }
 
-function nth (list, number) {
+function nth(list, number) {
   return listToArray(list)[number]
 }
 
-function nthRecursive (list, number) {
+function nthRecursive(list, number) {
   if (number === 0) {
     return list.value
   } else if (list.rest === null) {

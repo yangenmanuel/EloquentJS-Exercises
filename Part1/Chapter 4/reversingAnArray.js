@@ -5,7 +5,7 @@ Thinking back to the notes about side effects and pure functions in the previous
  */
 
 const arr1 = [1, 2, 3]
-function reverseArray (arr) {
+function reverseArray(arr) {
   const reversed = []
 
   for (let i = arr.length - 1; i >= 0; i--) {
@@ -18,11 +18,11 @@ console.log(reverseArray(arr1)) // [3, 2, 1]
 console.log(arr1) // [1, 2, 3] El array original no fue modificado
 
 const arr2 = [1, 2, 3]
-function reverseArrayInPlace (arr2) {
+function reverseArrayInPlace(arr2) {
   for (let i = 0; i < Math.floor(arr2.length / 2); i++) {
-		  const old = arr2[i]
-    	arr2[i] = arr2[arr2.length - 1 - i]
-    	arr2[arr2.length - 1 - i] = old
+    const old = arr2[i]
+    arr2[i] = arr2[arr2.length - 1 - i]
+    arr2[arr2.length - 1 - i] = old
   }
   return arr2
 }

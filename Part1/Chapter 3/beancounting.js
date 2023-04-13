@@ -13,7 +13,7 @@ argument that indicates the character that is to be counted (rather than countin
 uppercase “B” characters). Rewrite countBs to make use of this new function.
  */
 
-function countBs (str) {
+function countBs(str) {
   const parsedStr = String(str)
   let bCount = 0
 
@@ -24,7 +24,7 @@ function countBs (str) {
   return bCount
 }
 
-function countChar (str, match) {
+function countChar(str, match) {
   const parsedStr = String(str)
   const parsedMatch = String(match)
   let count = 0

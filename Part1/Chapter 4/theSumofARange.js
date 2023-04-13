@@ -18,7 +18,7 @@ const range = (first, last, step) => {
       arr.push(i)
     }
   } else {
-    for (let i = first; i <= last; step ? i += step : i++) {
+    for (let i = first; i <= last; step ? (i += step) : i++) {
       arr.push(i)
     }
   }

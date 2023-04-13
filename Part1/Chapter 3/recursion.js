@@ -13,13 +13,13 @@ Define a recursive function isEven corresponding to this description. The functi
 Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this?
  */
 
-function isEven (num) {
+function isEven(num) {
   // Checking if the number is not an integer and not negative
-  if (Math.sign(num) === -1 || !Number.isInteger(num)) return 'Not a valid number'
+  if (Math.sign(num) === -1 || !Number.isInteger(num))
+    return 'Not a valid number'
 
   if (num === 0) return true
   else if (num === 1) return false
-
   else return isEven(num - 2)
 }
 

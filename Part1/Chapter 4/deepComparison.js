@@ -7,9 +7,15 @@ To find out whether values should be compared directly (use the === operator for
 The Object.keys function will be useful when you need to go over the properties of objects to compare them.
 */
 
-function deepEqual (val1, val2) {
+function deepEqual(val1, val2) {
   if (val1 === val2) return true
-  if ((typeof val1 !== 'object' && val1 === null) && (typeof val2 !== 'object' && val2 == null)) return false
+  if (
+    typeof val1 !== 'object' &&
+    val1 === null &&
+    typeof val2 !== 'object' &&
+    val2 == null
+  )
+    return false
 
   const keysA = Object.keys(val1)
   const keysB = Object.keys(val2)

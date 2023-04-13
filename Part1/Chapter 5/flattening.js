@@ -4,7 +4,7 @@ Use the reduce method in combination with the concat method to “flatten” an 
 of arrays into a single array that has all the elements of the original arrays.
 */
 
-function flatter (arr) {
+function flatter(arr) {
   return arr.reduce((acc, curr) => {
     return acc.concat(curr)
   }, [])
